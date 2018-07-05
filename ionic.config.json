@@ -1,0 +1,8 @@
+{
+  "name": "tax-si_cliente",
+  "app_id": "f92744b5",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

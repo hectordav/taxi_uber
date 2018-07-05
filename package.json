@@ -1,0 +1,109 @@
+{
+  "name": "tax_si_cliente",
+  "author": "Hector Davila",
+  "homepage": "http://ionicframework.com/",
+  "private": true,
+  "scripts": {
+    "build": "ionic-app-scripts build",
+    "watch": "ionic-app-scripts watch",
+    "serve:before": "watch",
+    "emulate:before": "build",
+    "deploy:before": "build",
+    "build:before": "build",
+    "run:before": "build"
+  },
+  "dependencies": {
+    "@angular/common": "4.1.0",
+    "@angular/compiler": "4.1.0",
+    "@angular/compiler-cli": "4.1.0",
+    "@angular/core": "^4.1.0",
+    "@angular/forms": "4.1.0",
+    "@angular/http": "4.1.0",
+    "@angular/platform-browser": "4.1.0",
+    "@angular/platform-browser-dynamic": "4.1.0",
+    "@angular/platform-server": "2.4.8",
+    "@ionic-native/core": "3.10.2",
+    "@ionic-native/device": "^4.1.0",
+    "@ionic-native/geolocation": "^3.10.3",
+    "@ionic-native/google-maps": "^3.10.3",
+    "@ionic-native/launch-navigator": "^4.2.1",
+    "@ionic-native/native-geocoder": "^3.14.0",
+    "@ionic-native/network": "^4.2.1",
+    "@ionic-native/onesignal": "^4.5.2",
+    "@ionic-native/splash-screen": "^3.12.1",
+    "@ionic-native/status-bar": "3.10.2",
+    "@ionic/cloud-angular": "^0.12.0",
+    "@ionic/storage": "2.0.1",
+    "cordova-android": "~6.1.0",
+    "cordova-plugin-background-mode": "~0.7.2",
+    "cordova-plugin-device": "~1.1.3",
+    "cordova-plugin-facebook4": "^1.7.4",
+    "cordova-plugin-geolocation": "~2.4.3",
+    "cordova-plugin-googlemaps": "~2.1.1",
+    "cordova-plugin-ionic": "~2.0.3",
+    "cordova-plugin-nativegeocoder": "^2.0.4",
+    "cordova-plugin-network-information": "~1.3.3",
+    "cordova-plugin-splashscreen": "~4.0.0",
+    "cordova-plugin-statusbar": "~2.2.0",
+    "cordova-plugin-whitelist": "~1.3.0",
+    "g": "^2.0.1",
+    "ionic-angular": "3.5.3",
+    "ionic-native": "2.4.1",
+    "ionic-plugin-keyboard": "~2.2.1",
+    "ionicons": "3.0.0",
+    "lodash": "^4.17.4",
+    "marker-animate-unobtrusive": "^0.2.8",
+    "me.tonny.cordova.plugins.multidex": "https://github.com/jwall149/cordova-multidex",
+    "node-sass": "^4.6.1",
+    "onesignal-cordova-plugin": "^2.2.5",
+    "rxjs": "5.1.1",
+    "sw-toolbox": "3.6.0",
+    "uk.co.workingedge.phonegap.plugin.launchnavigator": "~4.0.4",
+    "zone.js": "^0.8.4"
+  },
+  "devDependencies": {
+    "@angular/tsc-wrapped": "^4.4.6",
+    "@ionic/app-scripts": "2.0.2",
+    "ionic": "3.19.1",
+    "typescript": "~2.2.1"
+  },
+  "description": "tax_si_cliente: Taxi",
+  "cordovaPlugins": [],
+  "cordovaPlatforms": [],
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-device": {},
+      "cordova-plugin-facebook4": {
+        "APP_ID": "1916377975275198",
+        "APP_NAME": "TaxSI"
+      },
+      "cordova-plugin-geolocation": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-whitelist": {},
+      "ionic-plugin-keyboard": {},
+      "cordova-plugin-background-mode": {},
+      "cordova-plugin-network-information": {},
+      "me.tonny.cordova.plugins.multidex": {},
+      "uk.co.workingedge.phonegap.plugin.launchnavigator": {},
+      "cordova-plugin-nativegeocoder": {
+        "LOCATION_WHEN_IN_USE_DESCRIPTION": "Use geocoder service"
+      },
+      "cordova-plugin-googlemaps": {
+        "API_KEY_FOR_ANDROID": "AIzaSyDh7gifeXMtWPzP6CeA8ob9kcqm6yV1Gbo",
+        "API_KEY_FOR_IOS": "AIzaSyDh7gifeXMtWPzP6CeA8ob9kcqm6yV1Gbo"
+      },
+      "cordova-plugin-ionic": {
+        "APP_ID": "0b016ea4",
+        "CHANNEL_NAME": "Master",
+        "UPDATE_METHOD": "background",
+        "UPDATE_API": "https://api.ionicjs.com",
+        "MAX_STORE": "2"
+      },
+      "onesignal-cordova-plugin": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
+}

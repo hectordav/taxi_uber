@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Registro por Facebook</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <!-- Login form -->
+ <form [formGroup]="myForm" (ngSubmit)="guardar_registro()" novalidate>
+  <div padding text-center>
+    <h2 ion-text color="dark"><strong>Llena los siguiente datos para continuar</strong></h2>
+ </div>
+     <ion-list class="list-form" padding>
+  <!-- * -->
+<ion-item>
+  <ion-label>Fecha de Nacimiento</ion-label>
+    <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="fecha_nac" formControlName="fecha_nac"  ></ion-datetime>
+</ion-item>
+    <ion-item>
+      <ion-label floating color="apphead">CURP</ion-label>
+      <ion-input type="text" autocomplete="off" color="apphead" formControlName="cedula"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="myForm.get('cedula').errors && myForm.get('cedula').dirty">
+      <p *ngIf="myForm.get('cedula').hasError('required')">Campo Requerido</p>
+    </ion-item>
+<!-- * -->
+   <ion-item>
+      <ion-label floating color="apphead">Direccion</ion-label>
+      <ion-input type="text" autocomplete="off" color="apphead" formControlName="direccion"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="myForm.get('direccion').errors && myForm.get('direccion').dirty">
+      <p *ngIf="myForm.get('direccion').hasError('required')">Campo Requerido</p>
+    </ion-item>
+    <!-- * -->
+      <ion-item>
+      <ion-label floating color="apphead">Telf</ion-label>
+      <ion-input type="text" autocomplete="off" color="apphead" formControlName="telf"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="myForm.get('telf').errors && myForm.get('telf').dirty">
+      <p *ngIf="myForm.get('telf').hasError('required')">Campo Requerido</p>
+    </ion-item>
+    <!-- * -->
+      </ion-list>
+      <div padding>
+     <button ion-button full color="primary" [disabled]="myForm.invalid">Registrarse </button>
+      </div>
+</form>
+</ion-content>

@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar color="light">
+    <ion-title>Registro</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    
+      <!-- Login form -->
+ <form [formGroup]="myForm" (ngSubmit)="guardar_registro()" novalidate>
+    <ion-list class="list-form" padding>
+  <!-- * -->
+<ion-item>
+  <ion-label>Genero</ion-label>
+  <ion-select [(ngModel)]="g_genero" [ngModelOptions]="{standalone: true}" >
+    <ion-option value="1" selected="true">Masculino</ion-option>
+    <ion-option value="2">Femenino</ion-option>
+  </ion-select>
+</ion-item>
+<ion-item>
+  <ion-label>Fecha de Nacimiento</ion-label>
+    <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="fecha_nac" formControlName="fecha_nac"  ></ion-datetime>
+</ion-item>
+ 
+     <ion-item>
+      <ion-label floating color="apphead">Nombre</ion-label>
+      <ion-input type="text" autocomplete="off" color="apphead" formControlName="nombre"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="myForm.get('nombre').errors && myForm.get('nombre').dirty">
+      <p *ngIf="myForm.get('nombre').hasError('required')">Campo Requerido</p>
+    </ion-item>
+<!-- * -->
+      <ion-item>
+      <ion-label floating color="apphead">Telf</ion-label>
+      <ion-input type="text" autocomplete="off" color="apphead" formControlName="telf"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="myForm.get('telf').errors && myForm.get('telf').dirty">
+      <p *ngIf="myForm.get('telf').hasError('required')">Campo Requerido</p>
+    </ion-item>
+    <!-- * -->
+      <ion-item>
+      <ion-label floating color="apphead">Login/Email</ion-label>
+      <ion-input type="email" autocomplete="off" color="apphead" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="myForm.get('email').errors && myForm.get('email').dirty">
+      <p *ngIf="myForm.get('email').hasError('required')">Campo Requerido</p>
+      <p *ngIf="myForm.get('email').hasError('pattern')">Recuerda colocar un email</p>
+    </ion-item>
+    <!-- * -->
+   <ion-item>
+    <ion-label floating color="apphead">Password</ion-label>
+    <ion-input type="password" color="apphead" formControlName="password"></ion-input>
+  </ion-item>
+   <ion-item *ngIf="myForm.get('password').errors && myForm.get('password').dirty">
+      <p *ngIf="myForm.get('password').hasError('required')">Campo Obligatorio</p>
+  </ion-item>
+  <!-- * -->
+      </ion-list>
+      <div padding>
+     <button ion-button full color="facebook" [disabled]="myForm.invalid">Registrarse</button>
+      </div>
+</form>
+</ion-content>

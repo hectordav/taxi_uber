@@ -1,0 +1,72 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content class="auth-bg">
+  <div class="auth-content">
+    <div class="light-bg">
+      <!-- Logo -->
+         <div padding text-center>
+         
+         <div align="center">
+          <br>
+          <img src="assets/img/logo_2.png" />
+         </div>   <!-- <img src="assets/img/logo_2.png" /> -->
+         
+      <h3>{{status}}</h3>
+      </div>
+      <!-- Login form -->
+ <form [formGroup]="myForm" (ngSubmit)="login()" novalidate>
+    <ion-list class="list-form" padding>
+  <!-- * -->
+    <ion-item>
+      <ion-label floating color="apphead">Login</ion-label>
+      <ion-input type="email" autocomplete="off" color="apphead" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="myForm.get('email').errors && myForm.get('email').dirty">
+      <p *ngIf="myForm.get('email').hasError('required')">Campo Requerido</p>
+      <p *ngIf="myForm.get('email').hasError('pattern')">Recuerda colocar un email</p>
+    </ion-item>
+<!-- * -->
+   <ion-item>
+    <ion-label floating color="apphead">Password</ion-label>
+    <ion-input type="password" color="apphead" formControlName="password"></ion-input>
+  </ion-item>
+   <ion-item *ngIf="myForm.get('password').errors && myForm.get('password').dirty">
+      <p *ngIf="myForm.get('password').hasError('required')">Campo Obligatorio</p>
+  </ion-item>
+  <!-- * -->
+
+      </ion-list>
+     
+      <div padding>
+     <button ion-button full color="facebook" [disabled]="myForm.invalid">Entrar</button>
+      </div>
+</form>
+      <!-- <div padding>
+      <button ion-button full color="facebook" icon-left (click)="login_facebook()">
+        <ion-icon name="logo-facebook"></ion-icon>
+          Entrar con Facebook</button> 
+      </div> -->
+    <div padding=""></div>
+
+    <!-- Other links -->
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <span ion-text color="dark" (click)="olvido_password()">Olvido su password?</span>
+        </ion-col>
+        <ion-col align="right">
+          <span ion-text color="light">
+            <span ion-text color="dark" (click)="signup()">Registrate</span>
+          </span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>   
+    </div>
+    
+
+  </div>
+</ion-content>

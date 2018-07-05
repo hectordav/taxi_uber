@@ -1,0 +1,33 @@
+
+<ion-header align="center">
+  <ion-navbar color="light" >
+    <ion-title><h4 ion-text color="dark">Buscando Taxi</h4></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content  color="light">
+  <!-- Green circle with marker icon in the center -->
+  <div padding text-center="" >
+    <div class="radar circle">
+      <ion-icon name="pin" color="light" ></ion-icon>
+    </div>
+  </div>
+  <ion-list>
+    <ion-item >
+      <div align="center">
+         <h3 ion-text>Buscando...</h3>
+       </div> 
+    </ion-item>
+  </ion-list>
+  <ion-list class="list-no-border list-drivers" padding>
+    <ion-item *ngFor="let driver of drivers">
+      <span>{{ driver.nombre }}</span>
+      <span class="pull-right"><ion-icon name="car"></ion-icon></span>
+    </ion-item>
+  </ion-list>
+  <ion-footer>
+   <div>
+     <button  ion-button block color="facebook"(click)="cancelar_solicitud()">Cancelar Solicitud</button>
+   </div>
+</ion-footer>
+</ion-content>

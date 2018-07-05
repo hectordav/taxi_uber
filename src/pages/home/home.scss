@@ -1,0 +1,102 @@
+page-home,
+.home {
+  #map {
+    width: 100%;
+  }
+
+  .modal-bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .map-overlay {
+    position: absolute;
+    top: 10px;
+    left: 3%;
+    width: 94%;
+
+    .item {
+      .label {
+        font-size: 0.8em;
+      }
+    }
+  }
+
+  .booking-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transition: 0.5s;
+
+    .button-circle {
+      position: absolute;
+      top: -32px;
+      right: 6px;
+      padding: 30px 10px;
+      border-radius: 50%;
+      line-height: 36px;
+    }
+
+    .vehicles {
+      padding: 0;
+      min-height: 76px;
+      background: color($colors, light);
+
+      .item-vehicle {
+        color: color($colors, secondary);
+
+        &.active {
+          border-bottom: 4px solid color($colors, primary);
+          color: color($colors, dark);
+        }
+
+        i {
+          display: block;
+          font-size: 3em;
+        }
+      }
+    }
+
+    ion-item {
+      background: none;
+      padding-left: 0;
+
+      ion-icon {
+        font-size: 3rem;
+      }
+
+      &.button-set {
+
+        ion-label {
+          padding: 0;
+          margin: 0;
+
+          ion-grid {
+            padding: 0;
+          }
+
+          ion-row {
+            padding: 0;
+          }
+
+          ion-col {
+            padding: 0;
+          }
+
+          .button {
+            padding: 25px 5px;
+            background: none;
+            box-shadow: none;
+            color: color($colors, dark);
+
+            &.active {
+              background: color($colors, light);
+            }
+          }
+        }
+      }
+    }
+  }
+}

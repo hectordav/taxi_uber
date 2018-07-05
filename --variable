@@ -1,0 +1,28 @@
+Fetching plugin "cordova-plugin-ionic@~2.0.3" via npm
+Installing "cordova-plugin-ionic" for android
+Installing "cordova-plugin-add-swift-support" for android
+ANDROID_HOME=C:\Program Files (x86)\Android\android-sdk
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_152
+Subproject Path: CordovaLib
+Incremental java compilation is an incubating feature.
+:clean
+:CordovaLib:clean
+
+BUILD SUCCESSFUL
+
+Total time: 4.465 secs
+Dependent plugin "cordova-plugin-splashscreen" already installed on android.
+ANDROID_HOME=C:\Program Files (x86)\Android\android-sdk
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_152
+Subproject Path: CordovaLib
+Incremental java compilation is an incubating feature.
+:clean
+:CordovaLib:clean
+
+BUILD SUCCESSFUL
+
+Total time: 1.796 secs
+Installing "cordova-plugin-ionic" for ios
+Dependent plugin "cordova-plugin-add-swift-support" already installed on ios.
+Dependent plugin "cordova-plugin-splashscreen" already installed on ios.
+Saved plugin info for "cordova-plugin-ionic" to config.xml

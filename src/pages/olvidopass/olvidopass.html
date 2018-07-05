@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="light">
+  
+    <ion-title align="center">
+     <h4 ion-text >Olvido su password</h4>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+   <ion-content>
+      <!-- Login form -->
+ <form [formGroup]="myForm" (ngSubmit)="buscar_email()" novalidate>
+    <ion-list class="list-form" padding>
+  <!-- * -->
+    <ion-item>
+      <ion-label floating color="apphead">Login/Email</ion-label>
+      <ion-input type="email" autocomplete="off" color="apphead" formControlName="email"></ion-input>
+    </ion-item>
+    <!-- * -->
+  <!-- * -->
+      </ion-list>
+      <div padding>
+     <button ion-button full color="facebook" [disabled]="myForm.invalid">Verificar Email</button>
+      </div>
+</form>
+</ion-content>

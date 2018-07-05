@@ -1,0 +1,27 @@
+
+<ion-header>
+  <ion-navbar color="light" >
+    <ion-title><h4 ion-text >Calificar a Conductor</h4></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding color="gray">
+<ion-list class="list-form" padding align="center">
+<div>
+	<ion-label><h3 ion-text><strong>Como Calificarias el Servicio</strong></h3></ion-label>
+</div>
+
+	<ion-range min="0" max="5" step="1" snaps="true" [(ngModel)]="rate" color="amarillo">
+        <ion-icon range-left color="dark" name="star"></ion-icon>
+        <ion-icon range-right color="amarillo" name="star"></ion-icon>
+  </ion-range>
+<ion-item>
+	 <ion-label floating  color="apphead">Quieres Dejar un comentario?</ion-label>
+      <ion-input type="text" autocomplete="off" color="apphead" [(ngModel)]="comentario"></ion-input>
+</ion-item>
+<div class="padding">	
+   <button ion-button full color="facebook"  (click)="guardar_valores()">Enviar</button>
+</div>
+</ion-list>
+
+</ion-content>

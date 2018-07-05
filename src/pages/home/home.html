@@ -1,0 +1,54 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="light" >
+    <button  ion-button menuToggle>
+      <ion-icon name="menu" color="dark"></ion-icon>
+    </button>
+    <ion-title ><h4 ion-text color="dark">Home</h4></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!-- Show map here -->
+  <div id="{{ mapId }}" [ngStyle]="{height: mapHeight + 'px'}"></div>
+
+  <div class="modal-bg black-transparent" [hidden]="!showModalBg"></div>
+ 
+   <!--Choose pickup and drop off places-->
+   <ion-list class="map-overlay list-full-border">
+      <ion-item color="light">
+        <ion-label ion-text floating ><h4 ion-text color="dark">Inicio</h4></ion-label>
+         <ion-input name="txt_inicio" (click)="showAddressModal()" [(ngModel)]="address.place" type="text"></ion-input>
+      </ion-item>
+       <ion-item color="light">
+          <ion-label ion-text floating ><h4 ion-text color="dark">Destino</h4></ion-label>
+           <ion-input name="txt_fin" (click)="showAddressModal_2()" [(ngModel)]="address_2.place" type="text"></ion-input>
+        </ion-item>
+  </ion-list>
+
+  <!-- Booking information -->
+  <div class="booking-info">
+    <div class="padding">
+      <button ion-button full color="facebook" icon-left [hidden]="showForm" (click)="toggleForm()">
+    <h5 color="amarillo_taxi">Continuar</h5></button>
+    </div>
+    <ion-list class="booking-form stable-bg list-full-border padding-10" no-margin [hidden]="!showForm">
+      <ion-item><span class="italic" color="dark" >Precio Aproximado : {{calculo_tarifa}} <button  ion-button color="facebook" (click)="calculo_de_distancia()">Calcular</button></span>  </ion-item>
+      <ion-item (click)="showNotePopup()">
+        <span class="italic" color="dark"  [hidden]="note">Notas al Conductor</span>
+        <span color="dark"  [hidden]="!note">{{ note }}</span>
+      </ion-item>
+
+      <button  ion-button color="facebook"  block (click)="solicitar_carrera()">Solicitar Taxi</button>
+       <button ion-button full color="danger" icon-left (click)="toggleForm()">
+      <h5 color="amarillo_taxi">Regresar</h5></button>
+    </ion-list>
+  </div>
+   <div id="panel" style="display: none"></div>
+   
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar  color="light" >
+    <ion-title>Pagar Carrera</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list class="list-full-border">
+    <ion-item  >
+    <div align="center">
+       <h1 ion-text><strong> Valor a Pagar {{result_monto.monto}} MXN$</strong></h1>
+    </div>
+    </ion-item>
+    <ion-item>
+    <ion-label>Tipo de pago</ion-label>
+      <ion-select type="text" [(ngModel)]="g_select">
+        <ion-option value="1">Efectivo</ion-option>
+        <ion-option value="3">Codigo Promocion</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-grid class="driver-plate">
+        <ion-row>
+          <ion-col>
+            <button ion-button block color="facebook" (click)="pagar_carrera()"><h4 ion-text>Pagar</h4></button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+</ion-content>

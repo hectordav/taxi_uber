@@ -1,0 +1,75 @@
+
+<ion-header>
+  <ion-navbar color="light" >
+    <ion-title><h4 ion-text color="amarillo_taxi">Carrera en Curso</h4></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="driver-top dark-bg primary" text-center>
+    <span ><h5 ion-text color="amarillo_taxi">{{variable_content}}</h5></span>
+  </div>
+  
+  <div class="driver-info rlt" text-center >
+    <div class="driver-picture" padding-bottom *ngIf="result.adjunto">
+      <img class="circle" src="http://taxsi.mx/tax_si/assets/img/{{result.adjunto}}" alt=""/>
+    </div>
+    <div no-margin>Hola mi nombre es</div>
+    <h3 no-margin color="primary" >{{ result.nombre }}</h3>
+    <div no-margin>Ya estoy en Camino</div>
+    <div>
+      <ion-icon  name="md-star" color="yellow"  *ngFor="let start of range( puntaje_obtenido )"></ion-icon>
+      <ion-icon name="md-star" color="dark"  *ngFor="let start of range(5- puntaje_obtenido)"></ion-icon>
+    </div>
+    <br>
+    <br>
+    <ion-grid class="driver-plate">
+      <ion-row>
+        <ion-col class="center-block">
+           <button ion-button block color="facebook" (click)="comentarios()" >Ver Comentarios</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid class="driver-plate">
+      <ion-row>
+        <ion-col>
+          <div class="text-hint">Placa Numero</div>
+          <strong margin-top>{{ result.placa }}</strong>
+        </ion-col>
+        
+      </ion-row>
+    </ion-grid>
+      <ion-grid class="driver-plate">
+      <ion-row>
+        <ion-col>
+          <div class="text-hint">Tipo de Carro</div>
+          <strong margin-top>{{ result.descripcion_tipo }}</strong>
+        </ion-col>
+         <ion-col>
+          <div class="text-hint">Marca</div>
+          <strong margin-top>{{ result.descripcion_marca }}</strong>
+        </ion-col>
+        <ion-col>
+          <div class="text-hint">Modelo</div>
+          <strong margin-top>{{ result.descripcion_modelo }}</strong>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <br> 
+  </div>
+</ion-content>
+<ion-footer text-center>
+   <ion-grid class="driver-plate">
+        <ion-row>
+          <ion-col>
+            <button ion-button block color="facebook" disabled={{buttonDisabled}} (click)="trackin_page()">Seguimiento</button>
+          </ion-col>
+          <ion-col>
+            <button ion-button block color="facebook" (click)="abrir_mapa()">Ruta a Tomar</button>
+          </ion-col>
+          <ion-col>
+            <button ion-button block color="danger" (click)="cancelar_solicitud_taxi()" >Cancelar</button>
+          </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-footer>

@@ -1,0 +1,26 @@
+page-places,
+.places {
+  ion-item {
+    position: relative;
+
+    ion-icon,
+    ion-icon:first-child {
+      height: 100%;
+      min-width: 30px;
+      font-size: 20px;
+
+      &:before {
+        width: 32px;
+      }
+    }
+
+    .item-icon-label {
+      position: absolute;
+      left: 16px;
+      bottom: 10px;
+      min-width: 30px;
+      text-align: center;
+      font-size: 10px;
+    }
+  }
+}
